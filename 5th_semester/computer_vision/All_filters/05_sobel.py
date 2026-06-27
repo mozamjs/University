@@ -11,6 +11,7 @@
 # cv2.imshow("sobel Y", cv2.convertScaleAbs(dy))
 
 # magnitude = cv2.magnitude(dx, dy)
+# magnitude = np.sqrt(dx**2 + dy**2)
 
 # cv2.imshow("Magnitude",cv2.convertScaleAbs(magnitude))
 
