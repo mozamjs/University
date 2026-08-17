@@ -28,34 +28,59 @@
 
 # Manually creating the kernal for laplacian filter
 
+# import cv2
+# import numpy as np
+
+# img = cv2.imread("./images/lena_noisy.jpeg",0)
+
+# kernal = np.array([
+#     [0,1,0],
+#     [1,-4,1],
+#     [0,1,0]
+# ],dtype=np.float32)
+
+# kernal_8neighbour = np.array([
+#     [1,1,1],
+#     [1,-8,1],
+#     [1,1,1]
+# ],dtype=np.float32)
+
+# blur = cv2.GaussianBlur(img, (5,5),0)
+
+# #  agar gaussian nhi karn ga to noice bhi age bn jati ha laplacian ma 
+
+# lap = cv2.filter2D(blur,cv2.CV_64F,kernal)
+# lap1 = cv2.filter2D(blur,cv2.CV_64F,kernal_8neighbour)
+
+# lap = cv2.convertScaleAbs(lap)
+# lap1 = cv2.convertScaleAbs(lap1)
+
+# cv2.imshow("orignal", img)  
+# cv2.imshow("Laplacian", lap)
+# cv2.imshow("Laplacian 8 Neighbour", lap1)
+
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+
+
+
 import cv2
 import numpy as np
 
-img = cv2.imread("./images/lena_noisy.jpeg",0)
+img = cv2.imread("./images/lena.jpeg", cv2.IMREAD_GRAYSCALE)
 
-kernal = np.array([
-    [0,1,0],
-    [1,-4,1],
-    [0,1,0]
-],dtype=np.float32)
+# dx = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
+# dy = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
 
-kernal_8neighbour = np.array([
-    [1,1,1],
-    [1,-8,1],
-    [1,1,1]
-],dtype=np.float32)
+# Gradient angle (slope direction)
+# angle = np.arctan2(dy, dx)
 
-blur = cv2.GaussianBlur(img, (5,5),0)
+# Convert radians to degrees
+# angle_deg = np.degrees(angle)
 
-#  agar gaussian nhi karn ga to noice bhi age bn jati ha laplacian ma 
+# print("Slope (Angle) Matrix:")
+# print(angle_deg)
 
-lap = cv2.filter2D(blur,cv2.CV_64F,kernal)
-# lap = cv2.filter2D(blur,cv2.CV_64F,kernal_8neighbour)
-
-lap = cv2.convertScaleAbs(lap)
-
-cv2.imshow("orignal", img)  
-cv2.imshow("Laplacian", lap)
-
+cv2.imshow("Original", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -47,7 +47,7 @@ lap = cv2.Laplacian(blur, cv2.CV_64F)
 #         if patch.min() < 0 and patch.max() > 0:
 #             zero[i,j] = 255
 
-# small change also detected because of this image is too white so the solution is apply threshold 
+# problem: small change also detected because of this image is too white so the solution is apply threshold 
 
 zero = np.zeros_like(img)
 

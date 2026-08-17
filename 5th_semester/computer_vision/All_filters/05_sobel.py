@@ -42,12 +42,14 @@ kernal_y = np.array([
 
 dx = cv2.filter2D(img, cv2.CV_64F, kernal_x)
 dy = cv2.filter2D(img, cv2.CV_64F, kernal_y)
+magnitude = np.sqrt(dx**2 + dy**2)
+_,binary = cv2.threshold(magnitude,100,255,cv2.THRESH_BINARY)
 
 cv2.imshow("orignal", img)
 cv2.imshow("sobel X", cv2.convertScaleAbs(dx))
 cv2.imshow("sobel Y", cv2.convertScaleAbs(dy))
-magnitude = np.sqrt(dx**2 + dy**2)
 cv2.imshow("Magnitude", cv2.convertScaleAbs(magnitude))
+cv2.imshow("Threshold",binary)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
