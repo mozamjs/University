@@ -1,0 +1,238 @@
+'''
+arr = [10, 20, 30, 40, 50]
+
+# Read
+print(arr[2])          # 30
+
+# Update
+arr[2] = 99
+
+# Append
+arr.append(60)
+
+# Remove by value
+arr.remove(20)
+
+# Length
+print(len(arr))
+
+
+
+##########################
+#2
+arr = [12, 7, 19, 4, 25]
+
+# By value
+for x in arr:
+    print(x)
+
+# By index
+for i in range(len(arr)):
+    print(i, arr[i])
+
+# With index + value
+for i, x in enumerate(arr):
+    print(i, x)
+
+############
+
+#3
+import array 
+
+val = array.array('i' , [1,2,3,4,5,6, 7, 8])
+
+for i in range(0,6):
+    print(val[i], end=" ")
+
+print('\n')
+
+
+for i in range(0,len(val)):
+    print(val[i], end=" ")
+
+print('\n')
+
+for x in val:
+    print(x, end=' , ')
+
+print('\n')
+val.reverse()
+for i in range(0,len(val)):
+    print(val[i], end=" ")
+#######################
+
+
+#4 insert element 
+from array import *
+val = array('i' , [1,2,3,4,5,6, 7, 8])
+val.insert(2,66)
+val.append(55)
+val[5] = 900
+
+copyArray = array(val.typecode, (x for x in val))
+
+for i in range(0,len(val)):
+    print(val[i], end=" ")
+
+print('\n')
+
+for i in range(0,len(val)):
+    print(copyArray[i], end=" ")
+
+    ##################
+
+
+#5 copy array 
+from array import *
+val = array('i' , [1,2,3,4,5,6, 7, 8])
+
+
+copyArray = array(val.typecode, (x*2 for x in val))
+#copyArray.pop(3)  #based on the index
+#copyArray.remove(10)  # based on the value
+
+for i in range(0,len(copyArray)):
+    print(copyArray[i], end=" ")
+
+######################
+
+
+
+
+
+
+#6 Slicing
+from array import *
+val = array('i' , [1,2,3,4,5,6, 7, 8])
+
+a = val[0:3]
+print(a)
+b = val[::-1]   # reverse
+print(b)
+
+for i in range(0,len(val)):
+    print(val[i], end=" ")
+
+###########################
+    
+
+
+#07 Taking input from user
+
+
+from array import *
+val = array('i' , [])
+
+n = int(input('Enter number of Elements in the array'))
+
+for i in range(0,n):
+    val.append(int(input("Enter next number")))
+
+for x in val:
+    print(x, end=" ")
+
+#############
+    
+
+#08 Searching an element in the array
+
+from array import *
+val = array('i' , [1,2,3,4,5,6, 7, 8])
+
+i = val.index(8)
+print(i)
+
+for i in range(0,len(val)):
+    print(val[i], end=" ")
+
+    #######################
+
+
+
+#09 Multi Dimentional Arrays (hetrogeneous arrays)
+
+from numpy import *
+val = array([1,2,3,4,5,6, 7, 8.5, 'e'])
+
+for i in val:
+    print(i)
+
+
+# Type Casting 
+val = array([1,2,3,4,5,6, 7, 8.5], float)
+for i in val:
+    print(i)
+
+#######################
+    
+
+
+
+#10 arithmatic progression
+from numpy import *
+
+val = linspace(10,20,5)
+for i in val:
+    print(i)
+
+val = arange(10,20,2)
+for i in val:
+    print(i)
+
+########################################    
+    
+
+#11 Traversing
+
+arr = [12, 7, 19, 4, 25]
+
+# By value
+for x in arr:
+    print(x)
+
+# By index
+for i in range(len(arr)):
+    print(i, arr[i])
+
+# With index + value
+for i, x in enumerate(arr):
+    print(i, x)
+
+#########################
+    
+
+#zeros 
+from numpy import *
+
+val = zeros(10)
+
+for x in val:
+    print(x, end=" ")
+
+val1 = full(10,3)
+
+# By value
+for x in val1:
+    print(x, end=" ")
+
+####################
+    '''
+
+
+
+
+#multi dimentional array
+from numpy import *
+
+zero= array(10)
+print(zero)
+
+one = array([1,2,3,4,5])
+print(one)
+
+
+two = array([ [1,2,3,4,5], [6,7,8,9,10], [11,12,13,14,15]])
+print(two)
+
+three = array([ [ [1,2] , [3,4] ], [ [5,6], [7,8] ]])
+print(three)
