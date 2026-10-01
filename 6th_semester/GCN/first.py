@@ -25,12 +25,12 @@
 
 
 #10 arithmatic progression
-from numpy import *
+# from numpy import *
 
-val = linspace(10,20,5)
-for i in val:
-    print(i)
+# val = linspace(10,20,5)
+# for i in val:
+#     print(i)
 
-val = arange(10,20,2)
-for i in val:
-    print(i)
+# val = arange(10,20,2)
+# for i in val:
+#     print(i)
