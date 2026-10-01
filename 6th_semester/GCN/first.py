@@ -1,19 +1,4 @@
-# arr = [10,20,30,40,50]
-# print(arr)
 
-# arr[1]= 55
-# print(arr)
-
-# arr.append(49)
-# print(arr)
-
-# arr.remove(40)
-# print(arr)
-
-# print(len(arr))
-
-# str = ["musab","mozam","mohihb"]
-# print(str)
 
 #07 Taking input from user
 
