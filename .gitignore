@@ -1,0 +1,22 @@
+
+# Python virtual environments
+.Dataset
+.BSCS6th
+
+.venv/
+venv/
+env/
+tensorflow_env/
+
+
+
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
